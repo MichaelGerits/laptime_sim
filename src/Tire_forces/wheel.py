@@ -60,7 +60,7 @@ class Wheel:
     def calc_slipratio(self):
         """calculates the tire slip without accounting for rotational offsets from guigianni"""
 
-        self.kappa = (self.vel[0]- self.omega_c*self.r_r) / self.vel[0]
+        self.kappa = (self.vel[0]- self.omega_c*self.r_r) / np.abs(self.vel[0])
     
     #TODO: add tire model fitting
     #TODO: calc longitudinal slip
